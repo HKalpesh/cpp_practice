@@ -8,7 +8,7 @@ int main() // assume a 32-bit application
 
     std::cout << sizeof(chPtr) << '\n'; // prints 4
     std::cout << sizeof(iPtr) << '\n';  // prints 4
-    std::cout << sizeof(ldPtr) << '\n'; // prints 4
+    std::cout << sizeof(ldPtr) << '\n'; // prints 4`
 
     return 0;
 }
