@@ -2,16 +2,16 @@
 using namespace std;
 bool isvalidsudoku(vector<vector<string>> board){
     unordered_set<string> row[9],col[9],box[9];
-    for(int i=0;i<9;i++){
-        for(int j=0;j<9;j++){
-            string num= board[i][j];
-            if(num!="."){
-                if(row[i].count(num) || col[j].count(num) || box[i/3*3+j/3].count(num)){
+    for(int i=0;i<9;i++){// row
+        for(int j=0;j<9;j++){// col 
+            string num= board[i][j];// current number
+            if(num!="."){// if the cell is not empty
+                if(row[i].count(num) || col[j].count(num) || box[i/3*3+j/3].count(num)){// if the number is already seen in the current row, column or box, then it's not a valid sudoku
                     return false;
                 }
-                row[i].insert(num);
-                col[j].insert(num);
-                box[i/3*3+j/3].insert(num);
+                row[i].insert(num);// insert the number into the current row, column and box sets
+                col[j].insert(num);// insert the number into the current row, column and box sets//
+                box[i/3*3+j/3].insert(num);// insert the number into the current row, column and box sets
             }
         }
     }
