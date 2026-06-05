@@ -113,9 +113,7 @@ ptr= nullptr is a safe and correct way
 // => This just copies the address into the pointer object.
 
 // >>>>>>>>>>>>>>>>>>>>>  Question #3
-
 // Why should we set pointers that aren’t pointing to a valid object to ‘nullptr’?
-
 /*We can not determine whether a non-null pointer is valid or dangling, and accessing a dangling pointer will result in undefined behavior. Therefore, we need to ensure that we do not have any dangling pointers in our program.
 
 If we ensure all pointers are either pointing to valid objects or set to nullptr, then we can use a conditional to test for null to ensure we don’t dereference a null pointer, and assume all non-null pointers are pointing to valid objects.
